@@ -1,0 +1,94 @@
+@import 'tailwindcss' source(none);
+@source './*.ts';
+@source './*.tsx';
+@source './*/*.ts';
+@source './*/*.tsx';
+@source './*/*/*.ts';
+@source './*/*/*.tsx';
+
+@theme inline {
+  --font-mono: var(--mono);
+
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-elevated: var(--elevated);
+  --color-line: var(--line);
+  --color-muted: var(--muted);
+  --color-fg: var(--fg);
+  --color-accent: var(--accent);
+  --color-accent-fg: var(--accent-fg);
+}
+
+:root,
+[data-theme='dark'] {
+  color-scheme: dark;
+
+  --mono: ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Monaco, 'Cascadia Code', 'JetBrains Mono',
+    Consolas, 'Liberation Mono', monospace;
+
+  --bg: #000000;
+  --surface: #0a0a0a;
+  --elevated: #141414;
+  --line: #262626;
+  --muted: #808080;
+  --fg: #ededed;
+  --accent: #ffffff;
+  --accent-fg: #000000;
+
+  --grid: #171717;
+  --ring: rgba(255, 255, 255, 0.28);
+  --popup-shadow: rgba(0, 0, 0, 0.7);
+}
+
+[data-theme='light'] {
+  color-scheme: light;
+
+  --bg: #f6f2e9;
+  --surface: #fffdf7;
+  --elevated: #eee8db;
+  --line: #ddd5c6;
+  --muted: #8b8271;
+  --fg: #1c1a17;
+  --accent: #1c1a17;
+  --accent-fg: #f6f2e9;
+
+  --grid: #e5dece;
+  --ring: rgba(28, 26, 23, 0.32);
+  --popup-shadow: rgba(60, 50, 30, 0.18);
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--mono);
+  font-size: 13px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-fg);
+}
+
+.graph-grid {
+  background-image: radial-gradient(var(--grid) 1px, transparent 1px);
+}
+
+.node-selected {
+  box-shadow: 0 0 0 1px var(--ring);
+}
+
+.popover-panel {
+  box-shadow:
+    0 0 0 1px var(--line),
+    0 10px 30px var(--popup-shadow);
+}
