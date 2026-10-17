@@ -52,8 +52,6 @@ Prefer env vars? Copy `server/src/.env.example` to `server/src/.env` and set `GR
 ## Notes
 
 - The backend binds to `127.0.0.1` only. The Vite dev server is the single exposed port and proxies `/nodes` and `/settings` to it, so other devices on your LAN can reach the app but not the raw API or keys.
-- Node **positions are stored per-browser** (localStorage); node content is shared via the server.
-- See [`INFO.md`](INFO.md) for the architecture, data model, and API contract; [`TODO.md`](TODO.md) for planned work.
 
 ## License
 
