@@ -2,6 +2,8 @@
 
 A spatial canvas for thinking. Start with one idea, then branch it into more — connect nodes, explore tangents, and let an LLM add its own thoughts when you're stuck.
 
+![Branches demo](Demo.gif)
+
 When you **extend** a node, the model contributes three of its own ideas along different lenses:
 
 - **challenge** — pushes back on the idea
